@@ -1,7 +1,8 @@
 <mvc:View
 displayBlock="true"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+    controllerName="opensap.myapp.controller.App">
     <Carousel>
 		<pages>
 			<Image 		src="https://upload.wikimedia.org/wikipedia/commons/2/28/HelloWorld.svg"
@@ -10,5 +11,9 @@ displayBlock="true"
 				height="600px"/>
 		</pages>
 	</Carousel>
+    <Button
+        icon="sap-icon://begin"
+		text="Say Hello!"
+		press="onShowHello"/>
 
 </mvc:View>
