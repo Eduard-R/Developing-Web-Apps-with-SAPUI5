@@ -88,8 +88,18 @@ displayBlock="true"
 					                		<ObjectListItem
 					                			title="{Description}"
 					                			number="{Price}"
-					                			intro="{ProductID}"
-                                                 />
+                                                numberState="{= ${Price} > 500 ? 'Error' : 'Success'}"
+					                			intro="{ProductID}">
+                                                <firstStatus>
+													<ObjectStatus text="{
+														parts: [
+															{path: 'WeightUnit'},
+															{path: 'WeightMeasure'}
+														],
+														formatter : '.formatter.delivery'
+													}"/>
+												</firstStatus>
+                                                 </ObjectListItem>
 			                			</items>
 			                		</List>
 			                	</content>
